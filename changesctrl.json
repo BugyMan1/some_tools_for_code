@@ -1,13 +1,2 @@
 [
-    {
-        "name": "Cambiar color",
-        "branch": 1,
-        "foreman": "PersonaX",
-        "environment": [
-            "dllo1"
-        ],
-        "state": "",
-        "date": "",
-        "key": 1
-    }
 ]
