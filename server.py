@@ -8,7 +8,7 @@ app = Flask(__name__)
 api = Api(app)
 CORS(app)
 
-api.add_resource(ChangeCtrl,'/changectrl')
+api.add_resource(ChangeCtrl,'/changectrl','/changectrl/<changectrl>')
 api.add_resource(Env,'/environment')
 
 if __name__ == '__main__':
