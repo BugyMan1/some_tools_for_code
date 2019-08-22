@@ -28,8 +28,20 @@ class ChangeCtrl(Resource):
             del content[int(changectrl)]
             ChangeCtrl.seek(0)
             ChangeCtrl.truncate()
-            ChangeCtrl.write(json.dumps(content))
-        return {'status': 'OK', 'message': 'delete'}, 200
+            ChangeCtrl.write(json.dumps(content, indent=4))
+        return {'status': 'OK', 'message': 'deleted'}, 200
+
+# <<PUT>>
+
+    def put(self, changectrl):
+        changectrl_body = request.json
+        with open('changesctrl.json',"r+") as ChangeCtrl:
+            content = json.loads(ChangeCtrl.read())
+            content[int(changectrl)] = changectrl_body
+            ChangeCtrl.seek(0)
+            ChangeCtrl.truncate()
+            ChangeCtrl.write(json.dumps(content, indent=4))
+        return {'status': 'OK', 'message': 'updated'}, 200
 
 
 

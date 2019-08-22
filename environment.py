@@ -20,13 +20,3 @@ class Env(Resource):
         with open('environments.json','r') as environments:
             content = json.loads(environments.read())
             return content, 200
-
-# # <<DELETE>>
-
-#     def delete(self):
-#         with open('changesctrl.json', '') as
-
-# # <<PUT>>
-
-#     def put(self):
-#         with open('changesctrl.json','') as
